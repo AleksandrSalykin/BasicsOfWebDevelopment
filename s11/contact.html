@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aleksandr Salykin">
+    <title>Contact | Centria Edu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="container">
+         <nav>
+                <div class="logo">
+                    centria <span>edu</span>
+                </div>
+
+                <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#topics">Topics</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html" aria-current="page"><strong>Contact</strong></a></li>
+</ul>
+        <h1>Contact us</h1>
+        <p>Fill in the form below and send us your message.</p>
+    </header>
+
+    <main class="container">
+        <section class="topics" id="contact">
+            <h2>Contact us</h2>
+
+            
+<form class="card" action="https://httpbin.org/post" method="post">
+    <label for="name">Name (required, 2–80 characters)</label>
+    <input
+        type="text"
+        id="name"
+        name="name"
+        autocomplete="name"
+        required
+        minlength="2"
+        maxlength="80"
+    >
+
+    <label for="email">Email address (required, max 120 characters)</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        autocomplete="email"
+        required
+        maxlength="120"
+    >
+
+    <label for="phone">Phone number (optional)</label>
+    <p id="phone-help">
+        Enter 7–15 digits, optionally starting with +.
+        No spaces or hyphens. Example: +358401234567.
+    </p>
+    <input
+        type="tel"
+        id="phone"
+        name="phone"
+        autocomplete="tel"
+        pattern="[+]?[0-9]{7,15}"
+        aria-describedby="phone-help"
+    >
+
+    <label for="subject">Subject (required)</label>
+    <select id="subject" name="subject" required>
+        <option value="">Choose a subject</option>
+        <option value="feedback">Feedback</option>
+        <option value="question">Question</option>
+        <option value="other">Other</option>
+    </select>
+
+    <fieldset>
+        <legend>Preferred contact method (required)</legend>
+
+        <label for="contact-email">
+            <input
+                type="radio"
+                id="contact-email"
+                name="contact_method"
+                value="email"
+                required
+            >
+            Email
+        </label>
+
+        <label for="contact-phone">
+            <input
+                type="radio"
+                id="contact-phone"
+                name="contact_method"
+                value="phone"
+                required
+            >
+            Phone
+        </label>
+    </fieldset>
+
+    <label for="message">Message (required, 20–1000 characters)</label>
+    <textarea
+        id="message"
+        name="message"
+        rows="5"
+        required
+        minlength="20"
+        maxlength="1000"
+    ></textarea>
+
+    <button type="submit">Send message</button>
+</form>
+
+        </section>
+    </main>
+
+</body>
+</html>
